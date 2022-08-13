@@ -40,12 +40,16 @@ function validBraces(braces){
     if (braces[i] === ']') {
       bracket--;
     } 
-    if (paranthesis <0 || curly <0 || bracket< 0) {
+  } 
+   if (paranthesis <0 || curly <0 || bracket <0) {
       return false;
-    } else {
+   }
+    if (paranthesis ===0 || curly ===0 || bracket === 0) {
       return true;
+    } else {
+      return false;
     }
-    }
+    
   }
 
 console.log(validBraces("(){}[]"));
